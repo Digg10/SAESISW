@@ -57,13 +57,24 @@ h2{
   #padre{
     display: flex;
   }
-  input.ng-invalid.ng-touched{
-    border: solid 2px tomato;
+  
+input.ng-invalid.ng-touched{
+  border: solid 2px tomato;
 }
 
 input.ng-valid.ng-touched{
   border: solid 2px green;
 }
+
+textarea.ng-invalid.ng-touched{
+  border: solid 2px tomato;
+}
+
+textarea.ng-valid.ng-touched{
+border: solid 2px green;
+}
+
+
 .btn-primary{
   background-color: maroon;
   border-color: maroon;

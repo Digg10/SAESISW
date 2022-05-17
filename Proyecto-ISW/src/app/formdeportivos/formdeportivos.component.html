@@ -1,1 +1,104 @@
-<p>formdeportivos works!</p>
+
+  <app-header></app-header>
+  <app-navbar></app-navbar>
+  
+  <form  [formGroup]="formdeportivos"  (submit)="send" errorTailor >
+    <div class="container">
+      <p>Datos Deportivos</p>
+      <div class="form-group row">
+        <label for="deporte" class="col-sm-4 col-form-label">Deporte:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control"  formControlName="deporte" id="deporte" placeholder="Deporte" > 
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="entrenador" class="col-sm-4 col-form-label">Nombre del entrenador:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="entrenador" id="entrenador" placeholder="Entrenador" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="categoria" class="col-sm-4 col-form-label">Categoría:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="categoria" id="categoria" placeholder="Categoría" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="asociacion" class="col-sm-4 col-form-label">Asociación:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="asociacion" id="asociacion" placeholder="Asociación" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="fechadeinicio" class="col-sm-4 col-form-label">Fecha de inicio:</label>
+          <div class="col-sm-1">
+          <input type="date" name="fechadeinicio"  formControlName="fechadeinicio" min="2020-08-21" max="2024-08-21" />
+              <span class="validity"></span>
+          </div>    
+      </div>
+      <div class="form-group row">
+        <label for="lugardeentrenamiento" class="col-sm-4 col-form-label">Lugar de entrenamiento:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="lugardeentrenamiento" id="lugardeentrenamiento" placeholder="Lugar de entrenamiento" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="horaentrada" class="col-sm-4 col-form-label">Hora de Entrada:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="horaentrada" id="horaentrada" placeholder="Hora de Entrada" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="horasalida" class="col-sm-4 col-form-label">Hora de salida:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="horasalida" id="horasalida" placeholder="Hora de salida" >
+        </div>
+      </div>
+      <br/>
+      <p>Competencias</p>
+      <div class="form-group row">
+        <label for="deportecompetencia" class="col-sm-4 col-form-label"> Deporte:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="deportecompetencia" id="deportecompetencia" placeholder="Deporte" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="competencia" class="col-sm-4 col-form-label">Nombre de la competencia:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="competencia" id="competencia" placeholder="Nombre de la competencia" > 
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="sede" class="col-sm-4 col-form-label">Sede:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="sede" id="sede" placeholder="Deporte" > 
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="patrocinador" class="col-sm-4 col-form-label">Patrocinador:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="patrocinador" id="patrocinador" placeholder="Patrocinador" > 
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="fechainicio" class="col-sm-4 col-form-label">Fecha de inicio:</label>
+          <div class="col-sm-1">
+          <input type="date" name="fechainicio"  formControlName="fechainicio" min="2020-08-21" max="2024-08-21" />
+              <span class="validity"></span>
+          </div>    
+      </div>
+      <div class="form-group row">
+        <label for="fechatermino" class="col-sm-4 col-form-label">Fecha de termino:</label>
+          <div class="col-sm-1">
+          <input type="date" name="fechatermino"  formControlName="fechatermino"  min="2020-08-21" max="2024-08-21" />
+              <span class="validity"></span>
+          </div>    
+      </div>
+      <br/>
+      <button type="submit" [disabled]="formdeportivos.invalid"   class="btn btn-primary">Modificar datos</button>
+      
+    </div>
+  </form>
+  
+  <app-footer></app-footer> 
+  

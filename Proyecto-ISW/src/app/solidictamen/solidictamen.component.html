@@ -1,1 +1,78 @@
-<p>solidictamen works!</p>
+
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<form [formGroup]="solidictamen"  (submit)="send"  errorTailor>
+    <div class="container">
+      <h5>Solicitud de dictamen</h5>
+      <br/>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Boleta:</th>
+            <th scope="col"></th>
+            <th scope="col">Nombre:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2019630120</td>
+            <td></td>
+            <td>Carlos López Pérez</td>
+        
+          </tr>
+        </tbody>
+      </table>  
+      <br>
+      <br>
+      <div class="form-group row">
+        <label for="fechasolicitud" class="col-sm-4 col-form-label">Fecha de solicitud:</label>
+          <div class="col-sm-1">
+          <input type="date" name="fechasolicitud"   formControlName="fechasolicitud"   min="2020-08-21" max="2024-08-21" />
+              <span class="validity"></span>
+          </div>    
+      </div>
+      <br/>
+      <div class="form-group row">
+        <label for="motivodictamen"  class="col-sm-4 col-form-label">Motivo:</label>
+        <div class="col-sm-1">
+          <select class="custom-select" id="motivodictamen" formControlName="motivodictamen">
+          <option value="">Elige una opción</option>  
+          <option>Cambio de domicilio</option>
+          <option>Enfermedad del alumno</option>
+          <option>Enfermedad de un familiar</option>
+          <option>Problemas económicos</option>
+          <option>Cuestiones laborales</option>
+          <option>Salud mental</option>
+          <option>Hacer demasiado tiempo de traslado a la escuela</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="tipodictamen"  class="col-sm-4 col-form-label">Tipo de causa del dictamen</label>
+        <div class="col-sm-1">
+          <select class="custom-select" id="tipodictamen" formControlName="tipodictamen">
+          <option value="">Elige una opción</option>  
+          <option>Por tener una o más unidades desfasadas</option>
+          <option>Reconocimiento de calificaciones</option>
+          <option>Ampliación de tiempo para conclusión de estudios</option>
+          <option>Por no cumplir un dictamen anterior</option>
+          <option>Por no cuncluir el servicio social</option>
+          <option>Por otros motivos</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="peticion" class="col-sm-4 col-form-label">Petición:</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="peticion"  formControlName="peticion"  rows="3" placeholder="Describa su petición, escriba al menos 20 caracteres"></textarea>
+        </div>
+      </div>
+      <br/>
+      <button type="submit" [disabled]="solidictamen.invalid"   class="btn btn-primary">Enviar datos</button>   
+    </div>
+  </form>
+
+<app-footer></app-footer>  
